@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Практические задачи по Git</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Практические задачи по Git</h1>
+            <p class="subtitle">Закрепите знания через практику - от базовых команд до продвинутых техник</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="#level1">Уровень 1: Основы</a></li>
+                <li><a href="#level2">Уровень 2: Ветвление</a></li>
+                <li><a href="#level3">Уровень 3: Удаленные репозитории</a></li>
+                <li><a href="#level4">Уровень 4: Продвинутый</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="intro">
+            <h2>Структура практики</h2>
+            <p>Задачи разделены на 4 уровня сложности. Проходите их последовательно для лучшего результата.</p>
+            <div class="level-indicators">
+                <div class="level-indicator active">Уровень 1</div>
+                <div class="level-indicator">Уровень 2</div>
+                <div class="level-indicator">Уровень 3</div>
+                <div class="level-indicator">Уровень 4</div>
+            </div>
+        </section>
+
+        <section id="level1" class="level-section">
+            <h2>🎯 Уровень 1: Основы (Base Camp)</h2>
+            <p class="level-description">Освоить базовый рабочий процесс: создание репозитория, отслеживание изменений и
+                коммиты.</p>
+
+            <div class="task">
+                <h3>Задача 1.1: Инициализация и первый коммит</h3>
+                <div class="task-steps">
+                    <div class="step">
+                        <span class="step-num">1</span>
+                        <p>Создайте на своем компьютере новую папку <code>my_first_project</code></p>
+                    </div>
+                    <div class="step">
+                        <span class="step-num">2</span>
+                        <p>Инициализируйте в ней Git-репозиторий (<code>git init</code>)</p>
+                    </div>
+                    <div class="step">
+                        <span class="step-num">3</span>
+                        <p>Создайте файл <code>README.md</code> и напишите в нем: <code># Мой первый проект</code></p>
+                    </div>
+                    <div class="step">
+                        <span class="step-num">4</span>
+                        <p>Добавьте файл в область подготовленных файлов (<code>git add</code>)</p>
+                    </div>
+                    <div class="step">
+                        <span class="step-num">5</span>
+                        <p>Сделайте первый коммит с сообщением "Initial commit" (<code>git commit</code>)</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="task">
+                <h3>Задача 1.2: Работа с историей и изменениями</h3>
+                <div class="task-steps">
+                    <div class="step">
+                        <span class="step-num">1</span>
+                        <p>В том же проекте измените файл <code>README.md</code>, добавив описание проекта</p>
+                    </div>
+                    <div class="step">
+                        <span class="step-num">2</span>
+                        <p>Создайте новый файл <code>script.js</code> с любым содержанием</p>
+                    </div>
+                    <div class="step">
+                        <span class="step-num">3</span>
+                        <p>Проверьте статус репозитория (<code>git status</code>)</p>
+                    </div>
+                    <div class="step">
+                        <span class="step-num">4</span>
+                        <p>Посмотрите различия (<code>git diff</code>)</p>
+                    </div>
+                    <div class="step">
+                        <span class="step-num">5</span>
+                        <p>Добавьте только <code>README.md</code> в коммит</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="level2" class="level-section">
+            <h2>🌳 Уровень 2: Ветвление и слияние (The Forest of Branches)</h2>
+            <p class="level-description">Научиться создавать изолированные среды для разработки новых функций и
+                объединять их.</p>
+
+            <div class="task">
+                <h3>Задача 2.1: Создание и переключение веток</h3>
+                <div class="task-steps">
+                    <div class="step">
+                        <span class="step-num">1</span>
+                        <p>Создайте новую ветку <code>feature/login</code> (<code>git checkout -b feature/login</code>)
+                        </p>
+                    </div>
+                    <div class="step">
+                        <span class="step-num">2</span>
+                        <p>В ветке создайте файл <code>login.js</code> и напишите в нем функцию</p>
+                    </div>
+                    <div class="step">
+                        <span class="step-num">3</span>
+                        <p>Сделайте коммит этих изменений</p>
+                    </div>
+                    <div class="step">
+                        <span class="step-num">4</span>
+                        <p>Вернитесь на ветку <code>main</code> и убедитесь, что файл исчез</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="task">
+                <h3>Задача 2.2: Слияние с конфликтом</h3>
+                <div class="task-steps">
+                    <div class="step">
+                        <span class="step-num">1</span>
+                        <p>На ветке <code>main</code> измените первую строку в <code>README.md</code></p>
+                    </div>
+                    <div class="step">
+                        <span class="step-num">2</span>
+                        <p>Сделайте коммит этого изменения</p>
+                    </div>
+                    <div class="step">
+                        <span class="step-num">3</span>
+                        <p>На ветке <code>feature/login</code> измените ту же строку по-другому</p>
+                    </div>
+                    <div class="step">
+                        <span class="step-num">4</span>
+                        <p>Попробуйте слить ветки - произойдет конфликт!</p>
+                    </div>
+                    <div class="step">
+                        <span class="step-num">5</span>
+                        <p>Разрешите конфликт вручную и завершите слияние</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="level3" class="level-section">
+            <h2>☁️ Уровень 3: Работа с удаленными репозиториями (The Cloud)</h2>
+            <p class="level-description">Научиться работать с GitHub, GitLab или другим хостингом.</p>
+
+            <div class="task">
+                <h3>Задача 3.1: Клонирование и Push</h3>
+                <div class="task-steps">
+                    <div class="step">
+                        <span class="step-num">1</span>
+                        <p>Создайте новый публичный репозиторий на GitHub/GitLab</p>
+                    </div>
+                    <div class="step">
+                        <span class="step-num">2</span>
+                        <p>Склонируйте этот репозиторий (<code>git clone &lt;URL&gt;</code>)</p>
+                    </div>
+                    <div class="step">
+                        <span class="step-num">3</span>
+                        <p>Создайте файл, сделайте коммит и отправьте изменения (<code>git push</code>)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="level4" class="level-section">
+            <h2>🏔️ Уровень 4: Продвинутые техники (The Summit)</h2>
+            <p class="level-description">Освоить инструменты для эффективного поддержания чистой истории и отмены
+                изменений.</p>
+
+            <div class="task">
+                <h3>Задача 4.1: Интерактивное перебазирование</h3>
+                <div class="task-steps">
+                    <div class="step">
+                        <span class="step-num">1</span>
+                        <p>Создайте ветку с несколькими неидеальными коммитами</p>
+                    </div>
+                    <div class="step">
+                        <span class="step-num">2</span>
+                        <p>Выполните интерактивное перебазирование (<code>git rebase -i main</code>)</p>
+                    </div>
+                    <div class="step">
+                        <span class="step-num">3</span>
+                        <p>Склейте коммиты и измените сообщения</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bonus-section">
+            <h2>🎁 Бонус: Практика в реальных условиях</h2>
+            <div class="bonus-task">
+                <p>Создайте свой небольшой проект и ведите его разработку, используя Git и GitHub:</p>
+                <ul>
+                    <li><code>main</code> ветка всегда должна быть стабильной</li>
+                    <li>Для каждой новой фичи создавайте новую ветку от <code>main</code></li>
+                    <li>Создавайте Pull Request и только потом сливайте в <code>main</code></li>
+                </ul>
+            </div>
+        </section>
+
+        <div class="navigation-buttons">
+            <a href="index.html" class="nav-button">← Назад к теории</a>
+            <button class="nav-button" onclick="scrollToTop()">Наверх ↑</button>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Git Tutorial. Все права защищены.</p>
+            <div class="footer-links">
+                <a href="index.html">Главная</a>
+                <a href="practice.html">Практика</a>
+                <a href="#">Контакты</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+
+</html>
