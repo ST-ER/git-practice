@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Основы Git</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Основы работы с Git</h1>
+            <p class="subtitle">Изучите основные команды и рабочий процесс системы контроля версий</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#basics">Базовые команды</a></li>
+                <li><a href="#branches">Работа с ветками</a></li>
+                <li><a href="#workflow">Рабочий процесс</a></li>
+                <li><a href="#resources">Дополнительно</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section id="basics">
+            <h2>Базовые команды</h2>
+            <div class="command-block">
+                <div class="command">
+                    <pre><code>git init</code></pre>
+                    <p>Инициализация нового репозитория</p>
+                </div>
+                <div class="command">
+                    <pre><code>git clone &lt;url&gt;</code></pre>
+                    <p>Клонирование существующего репозитория</p>
+                </div>
+                <div class="command">
+                    <pre><code>git status</code></pre>
+                    <p>Проверка статуса репозитория</p>
+                </div>
+                <div class="command">
+                    <pre><code>git add &lt;файл&gt;</code></pre>
+                    <p>Добавление файла в индекс</p>
+                </div>
+                <div class="command">
+                    <pre><code>git commit -m "сообщение"</code></pre>
+                    <p>Создание коммита с сообщением</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="branches">
+            <h2>Работа с ветками</h2>
+            <div class="command-block">
+                <div class="command">
+                    <pre><code>git branch</code></pre>
+                    <p>Просмотр списка веток</p>
+                </div>
+                <div class="command">
+                    <pre><code>git branch &lt;имя&gt;</code></pre>
+                    <p>Создание новой ветки</p>
+                </div>
+                <div class="command">
+                    <pre><code>git checkout &lt;имя&gt;</code></pre>
+                    <p>Переключение на другую ветку</p>
+                </div>
+                <div class="command">
+                    <pre><code>git merge &lt;имя&gt;</code></pre>
+                    <p>Слияние веток</p>
+                </div>
+                <div class="command">
+                    <pre><code>git branch -d &lt;имя&gt;</code></pre>
+                    <p>Удаление ветки</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="workflow">
+            <h2>Рабочий процесс</h2>
+            <div class="workflow-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Клонирование репозитория</h3>
+                    <p>Начните с клонирования существующего репозитория или создания нового</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Внесение изменений</h3>
+                    <p>Редактируйте файлы в рабочей директории</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Добавление в индекс</h3>
+                    <p>Подготовьте файлы для коммита с помощью git add</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Создание коммита</h3>
+                    <p>Зафиксируйте изменения с описательным сообщением</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">5</div>
+                    <h3>Отправка на сервер</h3>
+                    <p>Отправьте изменения в удаленный репозиторий</p>
+                </div>
+            </div>
+
+            <div class="command-block">
+                <div class="command">
+                    <pre><code>git add .</code></pre>
+                    <p>Добавление всех изменений</p>
+                </div>
+                <div class="command">
+                    <pre><code>git commit -m "Сообщение"</code></pre>
+                    <p>Сохранение изменений</p>
+                </div>
+                <div class="command">
+                    <pre><code>git push origin main</code></pre>
+                    <p>Отправка изменений в удаленный репозиторий</p>
+                </div>
+                <div class="command">
+                    <pre><code>git pull</code></pre>
+                    <p>Получение изменений из удаленного репозитория</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="resources">
+            <h2>Дополнительные ресурсы</h2>
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <h3>Официальная документация</h3>
+                    <p>Полное руководство по Git</p>
+                    <a href="https://git-scm.com/doc" target="_blank" class="resource-link">Перейти →</a>
+                </div>
+                <div class="resource-card">
+                    <h3>Интерактивное обучение</h3>
+                    <p>Практические упражнения</p>
+                    <a href="https://learngitbranching.js.org/" target="_blank" class="resource-link">Перейти →</a>
+                </div>
+                <div class="resource-card">
+                    <h3>Шпаргалка по командам</h3>
+                    <p>Все основные команды в одном месте</p>
+                    <a href="https://training.github.com/" target="_blank" class="resource-link">Перейти →</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Git Tutorial. Все права защищены.</p>
+            <div class="footer-links">
+                <a href="#">Политика конфиденциальности</a>
+                <a href="#">Условия использования</a>
+                <a href="#">Контакты</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
