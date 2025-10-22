@@ -1,0 +1,69 @@
+<!DOCTYPE html><html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>50 практических задач по Git</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px auto;
+      max-width: 900px;
+      line-height: 1.6;
+      background: #fafafa;
+      color: #222;
+    }
+    h1, h2, h3 {
+      color: #333;
+    }
+    pre {
+      background: #f0f0f0;
+      padding: 10px;
+      border-radius: 6px;
+      overflow-x: auto;
+    }
+    .task {
+      margin-bottom: 25px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #ddd;
+    }
+    .task h3 {
+      margin-bottom: 5px;
+    }
+    .goal {
+      font-weight: bold;
+      color: #555;
+    }
+    code {
+      color: #005cc5;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>50 практических задач по Git</h1>
+  <p>Этот учебник предназначен для отработки команд Git в терминале VS Code. Все файлы создаются вручную, а команды вводятся последовательно.</p>  <h2>Базовые операции</h2>
+  <div class="task"><h3>1. Инициализация репозитория</h3><p class="goal">Цель: создать новый локальный репозиторий.</p><pre><code>mkdir git-practice
+cd git-practice
+git init</code></pre><p>После выполнения появится папка <code>.git</code>.</p></div>  <div class="task"><h3>2. Добавление файла и первый коммит</h3><p class="goal">Цель: научиться фиксировать изменения.</p><pre><code>echo "Hello Git" > readme.txt
+git add readme.txt
+git commit -m "Добавлен readme.txt"</code></pre></div>  <div class="task"><h3>3. Проверка статуса</h3><p class="goal">Цель: увидеть состояние файлов.</p><pre><code>git status</code></pre></div>  <div class="task"><h3>4. Просмотр истории коммитов</h3><p class="goal">Цель: научиться читать историю изменений.</p><pre><code>git log</code></pre></div>  <div class="task"><h3>5. Изменение существующего файла</h3><p class="goal">Цель: понять цикл изменения файла.</p><pre><code>echo "Добавил строку" >> readme.txt
+git add readme.txt
+git commit -m "Обновлён readme.txt"</code></pre></div>  <div class="task"><h3>6. Создание ветки</h3><p class="goal">Цель: научиться работать с ветками.</p><pre><code>git branch feature
+git switch feature</code></pre></div>  <div class="task"><h3>7. Слияние веток</h3><p class="goal">Цель: объединить изменения.</p><pre><code>git checkout main
+git merge feature</code></pre></div>  <div class="task"><h3>8. Разрешение конфликта</h3><p class="goal">Цель: научиться решать конфликты.</p><pre><code>git add readme.txt
+git commit</code></pre></div>  <div class="task"><h3>9. Удаление ветки</h3><p class="goal">Цель: очистить репозиторий от ненужных веток.</p><pre><code>git branch -d feature</code></pre></div>  <div class="task"><h3>10. Создание и переключение в одной команде</h3><p class="goal">Цель: ускорить создание веток.</p><pre><code>git switch -c dev</code></pre></div>  <div class="task"><h3>11. Добавление нескольких файлов</h3><p class="goal">Цель: добавить все изменения сразу.</p><pre><code>git add .
+git commit -m "Добавлены новые файлы"</code></pre></div>  <div class="task"><h3>12. Просмотр краткого лога</h3><p class="goal">Цель: компактно просматривать историю.</p><pre><code>git log --oneline</code></pre></div>  <div class="task"><h3>13. Отмена последнего коммита</h3><p class="goal">Цель: исправить ошибку без потери данных.</p><pre><code>git revert HEAD</code></pre></div>  <div class="task"><h3>14. Изменение последнего коммита</h3><p class="goal">Цель: поправить сообщение или добавить файл.</p><pre><code>git add файл.txt
+git commit --amend -m "Исправлен коммит"</code></pre></div>  <div class="task"><h3>15. Сравнение изменений</h3><p class="goal">Цель: понять, что изменилось.</p><pre><code>git diff</code></pre></div>  <div class="task"><h3>16. Возврат файла к последней версии</h3><p class="goal">Цель: отменить локальные изменения.</p><pre><code>git restore readme.txt</code></pre></div>  <div class="task"><h3>17. Игнорирование файлов</h3><p class="goal">Цель: исключить временные файлы из репозитория.</p><pre><code>echo "node_modules/" >> .gitignore
+git add .gitignore
+git commit -m "Добавлен .gitignore"</code></pre></div>  <div class="task"><h3>18. Просмотр удалённых репозиториев</h3><p class="goal">Цель: узнать, куда привязан проект.</p><pre><code>git remote -v</code></pre></div>  <div class="task"><h3>19. Подключение удалённого репозитория</h3><p class="goal">Цель: отправить проект на GitHub.</p><pre><code>git remote add origin https://github.com/user/git-practice.git
+git push -u origin main</code></pre></div>  <div class="task"><h3>20. Клонирование репозитория</h3><p class="goal">Цель: скачать чужой проект.</p><pre><code>git clone https://github.com/user/repo.git</code></pre></div>  <div class="task"><h3>21. Получение изменений</h3><p class="goal">Цель: обновить локальную копию.</p><pre><code>git pull</code></pre></div>  <div class="task"><h3>22. Отправка изменений</h3><p class="goal">Цель: загрузить коммиты в удалённый репозиторий.</p><pre><code>git push</code></pre></div>  <div class="task"><h3>23. Смена имени ветки</h3><p class="goal">Цель: переименовать ветку.</p><pre><code>git branch -m old-name new-name</code></pre></div>  <div class="task"><h3>24. Удаление файла из отслеживания</h3><p class="goal">Цель: убрать файл из индекса, не удаляя его физически.</p><pre><code>git rm --cached файл.txt</code></pre></div>  <div class="task"><h3>25. Просмотр автора изменений</h3><p class="goal">Цель: определить, кто изменил строку.</p><pre><code>git blame readme.txt</code></pre></div>  <div class="task"><h3>26. Перенос коммита (cherry-pick)</h3><p class="goal">Цель: применить конкретный коммит из другой ветки.</p><pre><code>git cherry-pick &lt;hash&gt;</code></pre></div>  <div class="task"><h3>27. Переписывание истории (rebase)</h3><p class="goal">Цель: сделать историю линейной.</p><pre><code>git rebase main</code></pre></div>  <div class="task"><h3>28. Прерывание rebase</h3><p class="goal">Цель: отменить процесс rebase.</p><pre><code>git rebase --abort</code></pre></div>  <div class="task"><h3>29. Слияние без fast-forward</h3><p class="goal">Цель: сохранить структуру веток.</p><pre><code>git merge --no-ff feature</code></pre></div>  <div class="task"><h3>30. Создание тега</h3><p class="goal">Цель: отметить релиз.</p><pre><code>git tag v1.0
+git push origin v1.0</code></pre></div>  <div class="task"><h3>31. Удаление тега</h3><p class="goal">Цель: удалить ненужный тег.</p><pre><code>git tag -d v1.0</code></pre></div>  <div class="task"><h3>32. Использование stash</h3><p class="goal">Цель: временно сохранить изменения.</p><pre><code>git stash
+git stash pop</code></pre></div>  <div class="task"><h3>33. Список stash</h3><p class="goal">Цель: посмотреть все сохранённые состояния.</p><pre><code>git stash list</code></pre></div>  <div class="task"><h3>34. Удаление stash</h3><p class="goal">Цель: очистить временные изменения.</p><pre><code>git stash clear</code></pre></div>  <div class="task"><h3>35. Сброс коммитов (soft reset)</h3><p class="goal">Цель: вернуть изменения в рабочее состояние.</p><pre><code>git reset --soft HEAD~1</code></pre></div>  <div class="task"><h3>36. Полный сброс (hard reset)</h3><p class="goal">Цель: удалить последние изменения.</p><pre><code>git reset --hard HEAD~1</code></pre></div>  <div class="task"><h3>37. Проверка различий между ветками</h3><p class="goal">Цель: сравнить содержимое двух веток.</p><pre><code>git diff main feature</code></pre></div>  <div class="task"><h3>38. Проверка последнего коммита</h3><p class="goal">Цель: увидеть, какие файлы были изменены.</p><pre><code>git show</code></pre></div>  <div class="task"><h3>39. Создание алиаса</h3><p class="goal">Цель: сократить часто используемые команды.</p><pre><code>git config --global alias.st status</code></pre></div>  <div class="task"><h3>40. Настройка имени и email</h3><p class="goal">Цель: установить данные автора.</p><pre><code>git config --global user.name "Имя"
+git config --global user.email "email@example.com"</code></pre></div>  <div class="task"><h3>41. Просмотр настроек</h3><p class="goal">Цель: убедиться в правильной конфигурации.</p><pre><code>git config --list</code></pre></div>  <div class="task"><h3>42. Удаление коммитов до определённого</h3><p class="goal">Цель: вернуть проект к старому состоянию.</p><pre><code>git reset --hard &lt;commit_hash&gt;</code></pre></div>  <div class="task"><h3>43. Поиск по истории</h3><p class="goal">Цель: найти коммит с нужной строкой.</p><pre><code>git log -S "строка"</code></pre></div>  <div class="task"><h3>44. Bisect (поиск бага)</h3><p class="goal">Цель: найти коммит, вызвавший ошибку.</p><pre><code>git bisect start
+git bisect bad
+git bisect good &lt;commit&gt;</code></pre></div>  <div class="task"><h3>45. Архивация репозитория</h3><p class="goal">Цель: создать архив проекта.</p><pre><code>git archive --format=zip HEAD > project.zip</code></pre></div>  <div class="task"><h3>46. Подмодули (submodules)</h3><p class="goal">Цель: добавить внешний репозиторий внутрь проекта.</p><pre><code>git submodule add https://github.com/user/lib.git libs/lib</code></pre></div>  <div class="task"><h3>47. Инициализация подмодулей</h3><p class="goal">Цель: скачать содержимое подмодулей.</p><pre><code>git submodule update --init --recursive</code></pre></div>  <div class="task"><h3>48. Удаление подмодуля</h3><p class="goal">Цель: удалить подмодуль полностью.</p><pre><code>git submodule deinit -f libs/lib
+rm -rf .git/modules/libs/lib
+git rm -f libs/lib</code></pre></div>  <div class="task"><h3>49. Создание патча</h3><p class="goal">Цель: экспортировать изменения в файл.</p><pre><code>git format-patch -1 HEAD</code></pre></div>  <div class="task"><h3>50. Использование Git Hooks</h3><p class="goal">Цель: автоматизировать действия при коммитах.</p><pre><code>#!/bin/sh
+echo "Проверка перед коммитом..."</code></pre><p>Создайте файл <code>.git/hooks/pre-commit</code>, вставьте этот код и сделайте его исполняемым.</p></div>
+</body>
+                                                                                                                                                                                                                                                                                                                                                                            </html>
